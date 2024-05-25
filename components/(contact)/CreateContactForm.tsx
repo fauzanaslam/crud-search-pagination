@@ -3,6 +3,7 @@
 import React from "react";
 import { createContactAction } from "@/actions/createContactAction";
 import { useFormState } from "react-dom";
+import SaveContactButton from "../(button)/SaveContactButton";
 
 const CreateContactForm = () => {
   const [state, formAction] = useFormState(createContactAction, null);
@@ -49,12 +50,7 @@ const CreateContactForm = () => {
             <p className="mt-2 text-sm text-red-500">{state?.message}</p>
           </div>
         </div>
-        <button
-          type="submit"
-          className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-sm text-sm w-full px-5 py-3 text-center"
-        >
-          save
-        </button>
+        <SaveContactButton label="save" />
       </form>
     </div>
   );
