@@ -4,8 +4,14 @@ import React from "react";
 import EditContactButton from "../(button)/EditContactButton";
 import DeleteContactButton from "../(button)/DeleteContactButton";
 
-const ContactTable = async () => {
-  const contacts = await getContactsAction();
+const ContactTable = async ({
+  query,
+  currentPage,
+}: {
+  query: string;
+  currentPage: number;
+}) => {
+  const contacts = await getContactsAction(query, currentPage);
   return (
     <div>
       <table className="w-full text-sm text-left text-gray-500">
