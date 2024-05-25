@@ -1,14 +1,14 @@
 "use client";
 import { IoSearch } from "react-icons/io5";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { useDebouncedCallback } from "use-debounce";
 
 const Search = () => {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
 
-  const handleSearch = (term: string) => {
-    console.log(term);
+  const handleSearch = useDebouncedCallback((term: string) => {
     const params = new URLSearchParams(searchParams);
     if (term) {
       params.set("query", term);
@@ -16,7 +16,7 @@ const Search = () => {
       params.delete("query");
     }
     replace(`${pathname}?${params.toString()}`);
-  };
+  }, 300);
 
   return (
     <div className="relative flex flex-1">
