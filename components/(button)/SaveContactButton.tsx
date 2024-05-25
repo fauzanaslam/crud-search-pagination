@@ -16,7 +16,7 @@ const SaveContactButton = ({ label }: { label: string }) => {
       {label === "save" ? (
         <span>{pending ? "saving..." : "save"}</span>
       ) : (
-        <span>{pending ? "updating" : "update"}</span>
+        <span>{pending ? "updating..." : "update"}</span>
       )}
     </button>
   );
