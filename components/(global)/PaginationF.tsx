@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { usePathname, useSearchParams } from "next/navigation";
-import { generatePagination } from "../../utils/generatePagination";
+import { generatePagination } from "@/utils/generatePagination";
 import clsx from "clsx";
 
-const PaginationFeat = ({ totalPages }: { totalPages: any }) => {
+const PaginationF = ({ totalPages }: { totalPages: any }) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const currentPage = Number(searchParams.get("page")) || 1;
@@ -123,4 +123,4 @@ const PaginationFeat = ({ totalPages }: { totalPages: any }) => {
   );
 };
 
-export default PaginationFeat;
+export default PaginationF;

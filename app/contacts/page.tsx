@@ -2,10 +2,10 @@ import React from "react";
 import ContactTable from "../../components/(contact)/ContactTable";
 import Search from "../../components/(global)/Search";
 import AddContactButton from "../../components/(button)/AddContactButton";
-import PaginationFeat from "@/components/(global)/PaginationFeat";
 import { getContactPagesAction } from "@/actions/getContactAction";
 import { Suspense } from "react";
 import { TableSkeleton } from "@/components/(global)/Skeleton";
+import PaginationF from "@/components/(global)/PaginationF";
 
 const Page = async ({
   searchParams,
@@ -28,7 +28,7 @@ const Page = async ({
         <ContactTable query={query} currentPage={currentPage} />
       </Suspense>
       <div className="flex justify-center mt-4">
-        <PaginationFeat totalPages={totalPages} />
+        <PaginationF totalPages={totalPages} />
       </div>
     </div>
   );
