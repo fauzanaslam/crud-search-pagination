@@ -1,3 +1,5 @@
+"use server";
+
 import { prisma } from "../libs/prisma";
 
 export const getContactByIdAction = async (id: string) => {
