@@ -2,7 +2,7 @@ import React from "react";
 import ContactTable from "../../components/(contact)/ContactTable";
 import Search from "../../components/(global)/Search";
 import AddContactButton from "../../components/(button)/AddContactButton";
-import Pagination from "../../components/(global)/Pagination";
+import Pagination from "@/components/(global)/Pagination";
 import { getContactPagesAction } from "@/actions/getContactAction";
 import { Suspense } from "react";
 import { TableSkeleton } from "@/components/(global)/Skeleton";
