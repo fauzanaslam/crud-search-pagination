@@ -6,7 +6,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { generatePagination } from "../../utils/generatePagination";
 import clsx from "clsx";
 
-const Pagination = ({ totalPages }: { totalPages: any }) => {
+const PaginationFeat = ({ totalPages }: { totalPages: any }) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const currentPage = Number(searchParams.get("page")) || 1;
@@ -123,4 +123,4 @@ const Pagination = ({ totalPages }: { totalPages: any }) => {
   );
 };
 
-export default Pagination;
+export default PaginationFeat;
